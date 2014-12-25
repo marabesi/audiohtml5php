@@ -64,6 +64,8 @@ Obs: Para que o upload funcione perfeitamente de a permissão 755 para a pasta /
 
 ##Banco de dados MySQL
 
+* Para alterar as configurações de conexão veja a classe **php/model/Connection.php**
+
 ```
 CREATE TABLE IF NOT EXISTS `tb_style` (
   `id_style` int(3) NOT NULL AUTO_INCREMENT,
