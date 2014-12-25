@@ -30,6 +30,7 @@ Obs: Para que o upload funcione perfeitamente de a permissão 755 para a pasta /
 ##PHP
 
 * php.ini : upload_max_filesize = 10M - limita o tamanho do arquivo mp3 para 10mb
+* PDO
 
 ##Opções do servidor (Apache)
 
