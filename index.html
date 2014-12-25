@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <title>Audio HTML5</title>
+</head>
+
+<body>
+    <main class="container">
+        <section class="box"></section>
+        <section class="box">
+            <div id="queue"></div>
+            <form id="form">
+                <fieldset class="extra-data">
+                    <input type="text" name="vc_music" id="vc_music" placeholder="Música" maxlength="100" />
+                    <select name="lb_style" id="lb_style"></select>
+                </fieldset>
+                <input type="file" name="vc_file" id="vc_file" />
+            </form>
+        </section>
+        <section class="box">
+            <div id="wrapper_audio">
+                <select id="lb_style_player">
+                    <option value="">Selecione um estilo</option>
+                </select>
+                <ul id="playlist"></ul>
+                <audio id="player" controls autoplay="">
+                    Não é possível executar o player nesse navegador
+                </audio>
+            </div>
+        </section>
+        <table id="tb_songs">
+            <thead>
+                <tr>
+                    <th>Música</th>
+                    <th>Estilo</th>
+                    <th>Arquivo</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot></tfoot>
+        </table>
+    </main>
+
+    <script src="js/jquery/jquery-1.11.0.min.js"></script>
+    <script src="js/uploadify/jquery.uploadifive.min.js"></script>
+    <script src="js/datatables/jquery.dataTables.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
