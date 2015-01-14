@@ -1,14 +1,12 @@
 ##Dependências do projeto
 
 Javascript
-* jQuery : http://jquery.com/
-Biblioteca necessária para dar suporte as abaixo descritas
+* [jQuery](http://jquery.com/): Biblioteca necessária para dar suporte as abaixo descritas
 
-* Uploadfy : http://www.uploadify.com/
-Uma biblioteca para fazer o upload de vários arquivos para
+* [Uploadfy](http://www.uploadify.com/): Uma biblioteca para fazer o upload de vários arquivos para
 o servidor
 
-* DataTables : https://datatables.net/
+* [DataTables](https://datatables.net/) : 
 Biblioteca responsável por exibir as músicas enviadas em uma tabela
 com várias funcionalidades como paginação, ordenação etc
 
@@ -30,9 +28,9 @@ Obs: Para que o upload funcione perfeitamente de a permissão 755 para a pasta /
 ##PHP
 
 * php.ini : upload_max_filesize = 10M - limita o tamanho do arquivo mp3 para 10mb
-* PDO
+* [PDO](http://php.net/manual/en/book.pdo.php)
 
-##Opções do servidor (Apache)
+##Opções do servidor ([Apache](http://www.apache.org/))
 
 ```
 <VirtualHost audiohtml5:80>
@@ -65,7 +63,7 @@ Obs: Para que o upload funcione perfeitamente de a permissão 755 para a pasta /
 
 ##Banco de dados MySQL
 
-* Para alterar as configurações de conexão veja a classe **php/model/Connection.php**
+* Para alterar as configurações de conexão veja a classe [php/model/Connection.php](https://github.com/marabesi/audiohtml5php/blob/master/php/model/Connection.php)
 
 ```
 CREATE TABLE IF NOT EXISTS `tb_style` (
