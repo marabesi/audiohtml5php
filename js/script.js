@@ -11,7 +11,6 @@
  * @see https://datatables.net/
  * @version 1.0
  */
-
 $(document).ready(function() {
 	$('#tb_songs').dataTable({
 		'oLanguage' : {
@@ -203,29 +202,30 @@ var findPlaylist = function(id) {
  * e alterar as classes dos elementos.
  */
 var player = function() {
-	var audio = $('#player');
+	var player = $('#player');
 	var playlist = $('#playlist');
 	var songs = playlist.find('li a');
 	
+    var audio = player[0];
 	// Pausa caso haja alguma outra música tocando enquanto
 	// o usuário muda de playlist
-	audio[0].pause();
+	audio.pause();
 	
 	// Toca a primeira música da lista automaticamente
-	play(playlist.find('li a').first(), audio[0]);
+	play(playlist.find('li a').first(), audio);
 	
 	
 	// Altera a função padrão do click no link
 	playlist.find('li a').click(function(event){
 		// Utiliza o preventDefault para que seja anulada a ação de ir para outra página
 		event.preventDefault();
-		play($(this), audio[0]);
+		play($(this), audio);
 	});
 	
 	// Função para ir para a próxima música existente na linha
-	audio[0].addEventListener('ended', function(event){
+	audio.addEventListener('ended', function(event){
 		var nextSong = $('.active').next().children();
-		play(nextSong, audio[0]);
+		play(nextSong, audio);
 	});
 	
 	function play(song, player) {
