@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Interface para utilizar o padrão de projetos DAO
+ * Interface to use the DAO (Data Access Object) pattern
  * 
  * @package php.model
  * @author Matheus Marabesi
@@ -12,30 +12,26 @@ interface InterfaceDao
 {
 	
 	/**
-	 * Método responsável por inserir dados
+	 * Insert the data
 	 */
 	public function inserir();
 	
 	/**
-	 * Método responsável por retorna todos os dados
-	 * existentes na tabela
+	 * Will fetch the data from the database.
 	 * 
-	 * obs : Esse padrão DAO contará também com a implementação
-	 * do padrão eagle e não lazy para a recuperação dos dados
-	 * pois o plugin utilizado (dataTable.js) já se encarrega de
-	 * realizar a paginação.
+	 * This method will return a list without a filter or pagination
+	 * which means it uses the eagle pattern instead of lazy. The dataTable.js
+	 * takes care of the pagination
 	 */
 	 public function listar();
 	 
 	 /**
-	  * Método que excluir um registro persistido
-	  * anteriormente na aplicação
+	  * Method used to delete a row in the database
 	  */
 	 public function deletar();
 	 
 	 /**
-	  * Método que retorna um registro específico
-	  * que é filtrado apartir do $id passado
+	  * Will fetch the data by its id in the database
 	  */
 	 public function buscar($id);
 	 
